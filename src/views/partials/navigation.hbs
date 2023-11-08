@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">product app</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/about">about</a>
+        </div>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/products">All products</a></li>
+            <li><a class="dropdown-item" href="/products/add">Add a product</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="users/logout">Logout</a></li>
+          </ul>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a href="/users/signin">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="/users/signup">Register</a>
+        </li>
+      {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
