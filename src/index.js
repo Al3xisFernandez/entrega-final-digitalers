@@ -1,9 +1,9 @@
-require("dotenv").config({ path: __dirname + "/.env" });
+require('dotenv').config();
 
-const app = require("./server");
+const app = require('./server')
 
-require("./database");
+require('./database');
 
-app.listen(app.get("port"), () => {
-  console.log("Server en puerto", app.get("port"));
-});
+app.listen(app.get('port'), () => {
+    console.log('Server en puerto', app.get('port'))
+})
